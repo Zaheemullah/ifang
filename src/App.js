@@ -7,8 +7,7 @@ import Alert from './components/Alert';
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 function App() {
@@ -40,21 +39,17 @@ function App() {
   }
   
   return (
-    <Router> {/* Wrap your main component with Router */}
+    <>
+     <Router>
       <Navbar title="TextUtilis" aboutText="About" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} />
+        {/* <TextForm showAlert={showAlert} heading="Enter a text to analyze below" mode={mode} /> */}
       <Routes>
-        <Route exact path="/about"
-         element={<About />}
-        /> 
-        <Route exact path="/"
-            element={<TextForm showAlert={showAlert} heading="Enter a text to analyze below" mode={mode} />}
-        />
+        <Route path="/about" element={<About />} />
       </Routes>
-      <div className="container my-5">
-        {/* <About/> */}
-      </div>
-    </Router>
+      {/* <div className="container my-5">You can add additional content here if needed</div> */}
+     </Router>
+    </>
   );
 }
 
