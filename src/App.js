@@ -43,10 +43,10 @@ function App() {
      <Router>
       <Navbar title="TextUtilis" aboutText="About" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} />
-        {/* <TextForm showAlert={showAlert} heading="Enter a text to analyze below" mode={mode} /> */}
-      <Routes>
-        <Route path="/about" element={<About />} />
-      </Routes>
+         <TextForm showAlert={showAlert} heading="Enter a text to analyze below" mode={mode} /> 
+      // <Routes>
+        <About />
+      // </Routes>
       {/* <div className="container my-5">You can add additional content here if needed</div> */}
      </Router>
     </>
